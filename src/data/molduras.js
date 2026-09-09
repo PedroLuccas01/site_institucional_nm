@@ -1,0 +1,42 @@
+export const MOLDURAS = [
+  {
+    id: "feed-numero",
+    nome: "Eu voto 20222",
+    formato: "feed",
+    url: "/assets/frames/feed-numero.png",
+    w: 1080,
+    h: 1080,
+  },
+  {
+    id: "feed-classica",
+    nome: "Clássica",
+    formato: "feed",
+    url: "/assets/frames/feed-classica.png",
+    w: 1080,
+    h: 1080,
+  },
+  {
+    id: "feed-cidade",
+    nome: "Fechado com o 44",
+    formato: "feed",
+    url: "/assets/frames/feed-cidade.png",
+    w: 1080,
+    h: 1080,
+  },
+  {
+    id: "story-gradiente",
+    nome: "Story clean",
+    formato: "stories",
+    url: "/assets/frames/story-gradiente.png",
+    w: 1080,
+    h: 1920,
+  },
+  {
+    id: "story-faixas",
+    nome: "Story faixas",
+    formato: "stories",
+    url: "/assets/frames/story-faixas.png",
+    w: 1080,
+    h: 1920,
+  },
+];
