@@ -94,7 +94,7 @@ export default function Moldura() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const a = document.createElement("a");
-    a.download = `eraldo-20222-${atual.id}.png`;
+    a.download = `nathan-1522-${atual.id}.png`;
     a.href = canvas.toDataURL("image/png");
     a.click();
   }
@@ -105,12 +105,12 @@ export default function Moldura() {
     try {
       const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
       const file = blob
-        ? new File([blob], `eraldo-20222-${atual.id}.png`, { type: "image/png" })
+        ? new File([blob], `nathan-1522-${atual.id}.png`, { type: "image/png" })
         : null;
       if (file && navigator.canShare?.({ files: [file] })) {
         await navigator.share({
           files: [file],
-          text: "Eu sou Filho do Amazonas. Vote Eraldo CB 20222.",
+          text: "O Amazonas em primeiro lugar. Vote Nathan Macena 1522.",
         });
         return;
       }
@@ -126,16 +126,15 @@ export default function Moldura() {
       <div className="container-c grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <p className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-blue-700">
-            Ferramenta 20222
+            Ferramenta 1522
           </p>
           <h2 className="mt-3 grid gap-[2px]">
             <span className="t-outline">Faça sua</span>
             <span className="t-solid">Moldura</span>
           </h2>
           <p className="mt-5 text-[15px] leading-relaxed text-ink-soft">
-            Escolha o formato, selecione uma das molduras oficiais, suba sua foto e ajuste o
-            enquadramento. Tudo acontece no seu próprio celular, sua foto não é enviada para nenhum
-            servidor.
+            Escolha o formato, suba sua foto e ajuste o enquadramento. Tudo acontece no seu próprio
+            celular, sua foto não é enviada para nenhum servidor.
           </p>
           <div className="mt-7">
             <p className="text-[11px] font-extrabold tracking-[0.16em] uppercase text-ink-soft">
@@ -147,8 +146,8 @@ export default function Moldura() {
               className="mt-2 inline-flex rounded-full bg-bg-light p-1"
             >
               {[
-                { id: "feed", rotulo: "Feed 1:1", qtd: 3 },
-                { id: "stories", rotulo: "Stories 9:16", qtd: 2 },
+                { id: "feed", rotulo: "Feed 1:1", qtd: 1 },
+                { id: "stories", rotulo: "Stories 9:16", qtd: 1 },
               ].map((tab) => (
                 <button
                   key={tab.id}
