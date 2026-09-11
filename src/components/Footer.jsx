@@ -36,7 +36,7 @@ export default function Footer() {
             ))}
           </nav>
         </div>
-        <div className="flex flex-col items-start gap-3 md:items-end">
+        <div className="flex flex-col items-start gap-3">
           <div className="flex items-start gap-3">
             {[
               { href: INSTAGRAM, Icon: Instagram, label: "Instagram" },
