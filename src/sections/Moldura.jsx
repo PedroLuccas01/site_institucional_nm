@@ -146,8 +146,8 @@ export default function Moldura() {
               className="mt-2 inline-flex rounded-full bg-bg-light p-1"
             >
               {[
-                { id: "feed", rotulo: "Feed 1:1", qtd: 1 },
-                { id: "stories", rotulo: "Stories 9:16", qtd: 1 },
+                { id: "feed", rotulo: "Feed 1:1" },
+                { id: "stories", rotulo: "Stories 9:16" },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -160,7 +160,9 @@ export default function Moldura() {
                   }`}
                 >
                   {tab.rotulo}
-                  <span className="ml-2 text-[11px] opacity-70">{tab.qtd}</span>
+                  <span className="ml-2 text-[11px] opacity-70">
+                    {MOLDURAS.filter((m) => m.formato === tab.id).length}
+                  </span>
                 </button>
               ))}
             </div>
@@ -179,9 +181,9 @@ export default function Moldura() {
                     aria-pressed={ativa}
                     onClick={() => setMolduraId(m.id)}
                     title={m.nome}
-                    className={`relative overflow-hidden rounded-xl border-2 bg-white transition ${
-                      ativa ? "border-lime-brand shadow-lg" : "border-black/10 hover:border-blue-600"
-                    }`}
+                    className={`relative overflow-hidden rounded-xl border-2 transition ${
+                      m.formato === "stories" ? "bg-blue-900" : "bg-white"
+                    } ${ativa ? "border-lime-brand shadow-lg" : "border-black/10 hover:border-blue-600"}`}
                   >
                     <img
                       src={m.url}
