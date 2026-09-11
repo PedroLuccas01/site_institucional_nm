@@ -19,13 +19,6 @@ export default function Footer() {
           <span className="inline-flex rounded-lg bg-white px-3 py-1.5">
             <Logo />
           </span>
-          <a
-            href={`mailto:${EMAIL}`}
-            className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-white/85 hover:text-lime-brand"
-          >
-            <Mail className="size-4 shrink-0 text-lime-brand" aria-hidden="true" />
-            {EMAIL}
-          </a>
           <nav className="mt-6 flex flex-wrap gap-x-6 gap-y-2" aria-label="Navegação do rodapé">
             {[
               { href: "/#inicio", label: "Início" },
@@ -43,23 +36,32 @@ export default function Footer() {
             ))}
           </nav>
         </div>
-        <div className="flex items-start gap-3">
-          {[
-            { href: INSTAGRAM, Icon: Instagram, label: "Instagram" },
-            { href: FACEBOOK, Icon: Facebook, label: "Facebook" },
-            { href: TIKTOK, Icon: TikTokIcon, label: "TikTok" },
-          ].map(({ href, Icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="grid size-11 place-items-center rounded-full bg-white/10 text-lime-brand transition-colors hover:bg-white/20"
-            >
-              <Icon className="size-5" />
-            </a>
-          ))}
+        <div className="flex flex-col items-start gap-3 md:items-end">
+          <div className="flex items-start gap-3">
+            {[
+              { href: INSTAGRAM, Icon: Instagram, label: "Instagram" },
+              { href: FACEBOOK, Icon: Facebook, label: "Facebook" },
+              { href: TIKTOK, Icon: TikTokIcon, label: "TikTok" },
+            ].map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid size-11 place-items-center rounded-full bg-white/10 text-lime-brand transition-colors hover:bg-white/20"
+              >
+                <Icon className="size-5" />
+              </a>
+            ))}
+          </div>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="inline-flex items-center gap-2 text-[14px] font-semibold text-white/85 hover:text-lime-brand"
+          >
+            <Mail className="size-4 shrink-0 text-lime-brand" aria-hidden="true" />
+            {EMAIL}
+          </a>
         </div>
       </div>
       <div className="border-t border-white/10">
