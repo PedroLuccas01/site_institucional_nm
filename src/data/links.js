@@ -1,6 +1,7 @@
 export const INSTAGRAM = "https://www.instagram.com/nathanmacenna/";
 export const FACEBOOK = "https://www.facebook.com/nathanmacenna";
 export const TIKTOK = "https://www.tiktok.com/@nathanmacenasouza";
+export const EMAIL = "contato@nathanmacena.social.br";
 
 export const CONTATO = INSTAGRAM;
 

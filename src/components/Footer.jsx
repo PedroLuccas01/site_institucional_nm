@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram } from "lucide-react";
-import { FACEBOOK, INSTAGRAM, LEGAL, TIKTOK } from "../data/links";
+import { Facebook, Instagram, Mail } from "lucide-react";
+import { EMAIL, FACEBOOK, INSTAGRAM, LEGAL, TIKTOK } from "../data/links";
 import Logo from "./Logo";
 
 function TikTokIcon({ className }) {
@@ -19,6 +19,13 @@ export default function Footer() {
           <span className="inline-flex rounded-lg bg-white px-3 py-1.5">
             <Logo />
           </span>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-white/85 hover:text-lime-brand"
+          >
+            <Mail className="size-4 shrink-0 text-lime-brand" aria-hidden="true" />
+            {EMAIL}
+          </a>
           <nav className="mt-6 flex flex-wrap gap-x-6 gap-y-2" aria-label="Navegação do rodapé">
             {[
               { href: "/#inicio", label: "Início" },
