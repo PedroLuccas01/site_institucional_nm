@@ -36,8 +36,8 @@ export default function Footer() {
             ))}
           </nav>
         </div>
-        <div className="flex flex-col items-start gap-3">
-          <div className="flex items-start gap-3">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <div className="flex items-center gap-3">
             {[
               { href: INSTAGRAM, Icon: Instagram, label: "Instagram" },
               { href: FACEBOOK, Icon: Facebook, label: "Facebook" },
@@ -55,6 +55,7 @@ export default function Footer() {
               </a>
             ))}
           </div>
+          <span className="hidden h-8 w-px bg-white/20 sm:block" aria-hidden="true" />
           <a
             href={`mailto:${EMAIL}`}
             className="inline-flex items-center gap-2 text-[14px] font-semibold text-white/85 hover:text-lime-brand"
